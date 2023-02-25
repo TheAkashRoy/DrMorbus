@@ -1,0 +1,49 @@
+.a1{
+    padding-left: 50px;
+    width:max-content;
+}
+.container{
+    font-size: large;
+
+}
+.a3{
+    color: rgb(94, 94, 199);
+    margin-left: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+.a4{
+    color: rgb(0, 2, 0);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 25px;
+    text-align: center;
+}
+.a5{
+    width:900px;
+    margin-left: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-weight: 800px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 0;
+    
+    background-color: white;
+}
+.list{
+    margin-left: 50px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.container3{
+    margin-left: 450px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    margin-top: 50px;
+    height: 300px;
+}
+.container4{
+    background-color: red;
+}
