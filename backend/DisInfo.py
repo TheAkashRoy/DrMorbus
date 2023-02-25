@@ -30,3 +30,20 @@ def riskf(name):
         index = next((index for (index, d) in enumerate(list_of_riskFactors) if d["Disease"] == str(name)), None)
         return (list_of_riskFactors[index])["RISKFAC"]
         # print(list_of_riskFactors[index])
+
+
+
+
+
+# def all():
+#     with open("disease_symptoms.csv", 'r') as f:
+        
+#         dict_reader = DictReader(f)
+        
+#         list_of_symptoms = list(dict_reader)
+#         index = [d["Disease"] for d in list_of_symptoms]
+
+#         # print(list_of_symptoms[index])
+#         return index
+# a=all()
+# print(a)

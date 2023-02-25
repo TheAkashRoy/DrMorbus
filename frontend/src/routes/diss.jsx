@@ -15,7 +15,7 @@ export default function Contact() {
                 disease.precautions.map((item2) => 
                 <li className="list">{item2}</li>);//method
 
-  const SymtomRender = 
+  const SymptomRender = 
                 
           disease.symptoms.map((item) => 
     <li className="list">{item}</li>);//method
@@ -33,7 +33,7 @@ export default function Contact() {
         {precautionsRender}
 
         <h3><div className="a3">Symtoms</div></h3>
-        {SymtomRender}
+        {SymptomRender}
       </div>
       </div>
     {/* </div> */}
