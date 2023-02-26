@@ -53,3 +53,11 @@
 .opcurse{
   cursor:pointer;
 }
+.outp{
+  padding-top: 30px;
+  color: indigo;
+  cursor:pointer;
+}
+.outp:hover{
+  
+}

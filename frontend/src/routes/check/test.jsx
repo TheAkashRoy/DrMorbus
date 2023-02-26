@@ -32,7 +32,7 @@ export default function SelectOtherProps() {
   
 
 
-  const [dis,setDis]= React.useState("Please enter the symptoms above :)");
+  const [dis,setDis]= React.useState(" ");
   const [age1,setAge1]=React.useState('');
   const [age2,setAge2]=React.useState('');
   const [age3,setAge3]=React.useState('');
@@ -133,9 +133,9 @@ export default function SelectOtherProps() {
     <>
     
       <div className="message">
-        <h1>Enter your Symptoms : </h1>
       </div>
 
+        <h1>Enter your Symptoms : </h1>
     <div className="container123">
 
       <div className="container21">
@@ -236,7 +236,7 @@ export default function SelectOtherProps() {
       <button type="button" id="b1" onClick={submitClick}>Submit</button>
       </div>
 
-    <h1>You may have : {dis}</h1>
+    <div className="outp"><h1>You may have : {dis}</h1></div>
     </div>
     </>
   );
