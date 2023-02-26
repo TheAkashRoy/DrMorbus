@@ -36,7 +36,7 @@ def modelPred(s1,s2,s3,s4,s5):
         l2.append(0)
 
     # TESTING DATA
-    tr=pd.read_csv("Testing.csv")
+    tr=pd.read_csv("testing.csv")
     tr.replace({'prognosis':{'Fungal infection':0,'Allergy':1,'GERD':2,'Chronic cholestasis':3,'Drug Reaction':4,
     'Peptic ulcer diseae':5,'AIDS':6,'Diabetes ':7,'Gastroenteritis':8,'Bronchial Asthma':9,'Hypertension ':10,
     'Migraine':11,'Cervical spondylosis':12,

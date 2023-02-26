@@ -9,7 +9,6 @@ import ErrorPage from "./error-page";
 import "./index.css";
 import Diss from "./routes/diss";
 import Test from "./routes/check/test";
-
 import Root from "./routes/root";
 
 const router = createBrowserRouter([
@@ -20,7 +19,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "disease/:diseaseId",
-        element: <Diss />,        
+        element: <Diss/>,        
       },
       {
         path:"test/",
