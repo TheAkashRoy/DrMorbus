@@ -1,83 +1,197 @@
-import React,{useState} from 'react';
+import * as React from 'react';
 import './test.css';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
 
-let symptoms = [""]
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+let symptoms = [];
 
-function Test() {
-  const [value1,setValue1]=useState();
-  const [value2,setValue2]=useState();
-  const [value3,setValue3]=useState();
-  const [value4,setValue4]=useState();
-  const [value5,setValue5]=useState();
+
+export default function SelectOtherProps() {
+  
+  const [age1,setAge1]=React.useState('');
+  const [age2,setAge2]=React.useState('');
+  const [age3,setAge3]=React.useState('');
+  const [age4,setAge4]=React.useState('');
+  const [age5,setAge5]=React.useState('');
+
+  const handleChange1=(event)=>{
+    setAge1(event.target.value);
+    if((event.target.value)!='')
+    {
+    if((event.target.value)!=undefined)
+    {
+    symptoms.push(event.target.value);
+    }
+  }
+  }
+
+  const handleChange2=(event)=>{
+    if((event.target.value)!='')
+    {
+    if((event.target.value)!=undefined)
+    {
+    setAge2(event.target.value);
+    symptoms.push(event.target.value);
+  }
+}
+}
+  const handleChange3=(event)=>{
+    if((event.target.value)!='')
+    {
+    if((event.target.value)!=undefined)
+    {
+    setAge3(event.target.value);
+    symptoms.push(event.target.value);
+  }
+}
+  }
+
+  const handleChange4=(event)=>{
+    if((event.target.value)!='')
+    {
+    if((event.target.value)!=undefined)
+    {
+    setAge4(event.target.value);
+    symptoms.push(event.target.value);
+  }
+}
+  }
+
+  const handleChange5=(event)=>{
+    if((event.target.value)!='')
+    {
+    if((event.target.value)!=undefined)
+    {
+    setAge5(event.target.value);
+    symptoms.push(event.target.value);
+    // console.log(symptoms)
+  }
+}
+  }
+
+  const submitClick=()=>{
+    let SubmitArr=[...new Set(symptoms)];//...= Spread Operator    new Set(arr) is a new array containing the values of the initial array but duplicates removed . Spread Operator then converts it back to array
+    symptoms=SubmitArr;
+    console.log(symptoms);
+  }
+
+
 
   const options = ["Rash","cough","Fever","Acidity","Stomach Pain"];
   const  op= options.map((item) =>
            <option value={item}>{item}</option>);
-  const handleOnChange1=(event)=>{
-    setValue1(event.target.value);
-    symptoms.push(event.target.value);
-  }
-  const handleOnChange2=(event)=>{
-    setValue2(event.target.value);
-    symptoms.push(event.target.value);
-  }
-  const handleOnChange3=(event)=>{
-    setValue3(event.target.value);
-    symptoms.push(event.target.value);
-  }
-  const handleOnChange4=(event)=>{
-    setValue4(event.target.value);
-    symptoms.push(event.target.value);
-  }
-  const handleOnChange5=(event)=>{
-    setValue5(event.target.value);
-    symptoms.push(event.target.value);
-    console.log(symptoms)
-
-  }
 
   return (
     <>
-      <div className="container3">
-      <div className="container4">
-        <div className="inside">
-       <select value={value1} onChange={handleOnChange1}>
-       {op};
-       </select>
-       </div>
-
-       <div className="inside">
-       <select value={value2} onChange={handleOnChange2}>
-       {op};
-
-       </select>
-       </div>
-
-       <div className="inside">
-       <select value={value3} onChange={handleOnChange3}>
-       {op};
-       </select>
-       </div>
-
-       <div className="inside">
-       <select value={value4} onChange={handleOnChange4}>
-       {op};
-       </select>
-       </div>
-
-       <div className="inside">
-       <select value={value5} onChange={handleOnChange5}>
-       {op};
-       </select>
+    
+      <div className="message">
+        <h1>Enter your Symtoms : </h1>
       </div>
-       </div>
-       </div>
+
+    <div className="container123">
+
+      <div className="container21">
+      <div className="inside">
+      {/* <FormControl sx={{ m: 1, minWidth: 220 }} size="small"> */}
+      <FormControl sx={{ m: 1, minWidth: 320,backgroundColor:'white'}}> 
+      <InputLabel id="demo-select-small">Symptom_1</InputLabel>
+      <Select
+        labelId="demo-select-small"
+        id="demo-select-small"
+        value={age1}
+        label="Symptom_1"
+        onClick={handleChange1}
+      >
+        <MenuItem value="">
+          <em>None</em>
+        </MenuItem>
+        {op}
+      </Select>
+    </FormControl>
+    </div>
+
+    <div className="inside">
+    <FormControl sx={{ m: 1, minWidth: 320,backgroundColor:'white' }}> 
+      <InputLabel id="demo-select-small">Symptom_2</InputLabel>
+      <Select
+        labelId="demo-select-small"
+        id="demo-select-small"
+        value={age2}
+        label="Symptom_2"
+        onClick={handleChange2}
+      >
+        <MenuItem value="">
+          <em>None</em>
+        </MenuItem>
+        {op}
+      </Select>
+    </FormControl>
+    </div>
+
+    <div className="inside">
+    <FormControl sx={{ m: 1, minWidth: 320,backgroundColor:'white' }}> 
+      <InputLabel id="demo-select-small">Symptom_3</InputLabel>
+      <Select
+        labelId="demo-select-small"
+        id="demo-select-small"
+        value={age3}
+        label="Symptom_3"
+        onClick={handleChange3}
+      >
+        <MenuItem value="">
+          <em>None</em>
+        </MenuItem>
+        {op}
+      </Select>
+    </FormControl>
+    </div>
+
+    <div className="inside">
+    <FormControl sx={{ m: 1, minWidth: 320 ,backgroundColor:'white'}}> 
+      <InputLabel id="demo-select-small">Symptom_4</InputLabel>
+      <Select
+        labelId="demo-select-small"
+        id="demo-select-small"
+        value={age4}
+        label="Symtom_4"
+        onClick={handleChange4}
+      >
+        <MenuItem value="">
+          <em>None</em>
+        </MenuItem>
+        {op}
+      </Select>
+    </FormControl>
+    </div>
+
+    <div className="inside">
+    <FormControl sx={{ m: 1, minWidth: 320,backgroundColor:'white' }}> 
+      <InputLabel id="demo-select-small">Symptom_5</InputLabel>
+      <Select
+        labelId="demo-select-small"
+        id="demo-select-small"
+        value={age5}
+        label="Symptom_5"
+        onClick={handleChange5}
+      >
+        <MenuItem value="">
+          <em>None</em>
+        </MenuItem>
+        {op}
+      </Select>
+    </FormControl>
+    </div>
+
+   </div>
+
+      <div className="submit">
+      <button type="button" id="b1" onClick={submitClick}>Submit</button>
+      </div>
+
+    </div>
+    
     </>
-  )
+  );
 }
-
-
-
-
-export default Test;
-
