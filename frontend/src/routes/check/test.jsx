@@ -27,11 +27,6 @@ export default function SelectOtherProps() {
       })
   }
   
-  
-  
-  
-
-
   const [dis,setDis]= React.useState(" ");
   const [age1,setAge1]=React.useState('');
   const [age2,setAge2]=React.useState('');
@@ -50,6 +45,7 @@ export default function SelectOtherProps() {
   // useEffect(() => {
   //   fetchData();
   // },[])
+  // This is v2.0
 
   const handleChange1=(event)=>{
     setAge1(event.target.value);
